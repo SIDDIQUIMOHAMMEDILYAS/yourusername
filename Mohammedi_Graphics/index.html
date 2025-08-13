@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammedi Graphics</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Merriweather', 'serif'],
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.5s ease-out forwards'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap');
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#" class="text-3xl font-bold text-gray-900 font-serif">
+                <h1>Mohammedi Graphics</h1>
+            </a>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8 align-items: flex-start margin: auto">
+                <a href="#portfolio"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-200 font-semibold">Home</a>
+                <a href="#services"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-200 font-semibold">Services</a>
+                <a href="#about"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-200 font-semibold">About</a>
+                <a href="#contact"
+                    class="text-gray-600 hover:text-indigo-600 transition-colors duration-200 font-semibold">Contact</a>
+                <button id="signup-button"
+                    class="bg-gray-100 text-gray-600 font-medium px-4 py-2 rounded-full hover:bg-gray-200 transition-colors hidden md:block">
+                    <a href="C:\Users\smohd\OneDrive\Desktop\practice\Mohammedi_Graphics\sign_up\signup.html">Sign
+                        Up</a>
+                </button>
+                <button id="login-button"
+                    class="bg-pink-500 text-white font-medium px-6 py-2 rounded-full hover:bg-pink-600 transition-colors">
+                    <a href="C:\Users\smohd\OneDrive\Desktop\practice\Mohammedi_Graphics\login\login.html">Login</a>
+                </button>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden text-gray-600 hover:text-indigo-600 transition-colors duration-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <nav class="flex flex-col space-y-4 px-6">
+                <a href="#portfolio"
+                    class="text-gray-800 hover:text-indigo-600 transition-colors duration-200 font-semibold">Home</a>
+                <a href="#services"
+                    class="text-gray-800 hover:text-indigo-600 transition-colors duration-200 font-semibold">Services</a>
+                <a href="#about"
+                    class="text-gray-800 hover:text-indigo-600 transition-colors duration-200 font-semibold">About</a>
+                <a href="#contact"
+                    class="text-gray-800 hover:text-indigo-600 transition-colors duration-200 font-semibold">Contact</a>
+                <button id="signup-button"
+                    class="bg-gray-100 text-gray-600 font-medium px-4 py-2 rounded-full hover:bg-gray-200 transition-colors hidden md:block">
+                    <a href="C:\Users\smohd\OneDrive\Desktop\practice\Mohammedi_Graphics\sign_up\signup.html">Sign
+                        Up</a>
+                </button>
+                <button id="login-button"
+                    class="bg-pink-500 text-white font-medium px-6 py-2 rounded-full hover:bg-pink-600 transition-colors">
+                    <a href="C:\Users\smohd\OneDrive\Desktop\practice\Mohammedi_Graphics\login\login.html">Login</a>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-violet-600 text-white py-20 md:py-32 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-serif leading-tight mb-4 animate-fade-in-up">
+                Bring Your Vision to Life.</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in"
+                style="animation-delay: 0.3s;">I create beautiful, functional designs for brands and individuals. Let's
+                build something amazing together.</p>
+            <a href="#portfolio"
+                class="inline-block px-8 py-4 bg-white text-indigo-600 font-bold rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105 opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.6s;">View My Work</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Recent Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Item 1 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="https://placehold.co/800x600/6366f1/ffffff?text=Branding+Project"
+                            alt="Branding Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xl font-bold">Branding Identity</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="https://placehold.co/800x600/f87171/ffffff?text=Website+Design" alt="Website Design"
+                            class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xl font-bold">Website Redesign</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="https://placehold.co/800x600/22d3ee/ffffff?text=Illustrations" alt="Illustrations"
+                            class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xl font-bold">Digital Illustrations</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="https://placehold.co/800x600/4ade80/ffffff?text=Social+Media+Graphics"
+                            alt="Social Media Graphics" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xl font-bold">Social Media Graphics</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 5 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="https://placehold.co/800x600/a78bfa/ffffff?text=Packaging+Design"
+                            alt="Packaging Design" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xl font-bold">Packaging Design</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 6 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+                        <img src="https://placehold.co/800x600/fca5a5/ffffff?text=Logo+Design" alt="Logo Design"
+                            class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white text-xl font-bold">Modern Logo Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Service 1 -->
+                    <div
+                        class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-indigo-600 transform hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-indigo-600"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-2">Brand Identity</h3>
+                        <p class="text-gray-600">From logo design to complete brand guidelines, I help you build a
+                            consistent and memorable identity.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div
+                        class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-indigo-600 transform hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-indigo-600"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-1.75-3M13 3a1 1 0 00-1 1v2c-2.072 0-3.901.815-5.32 2.19l-1.464 1.463-1.463-1.463A12.016 12.016 0 0110 4.225V4a1 1 0 00-2 0v.225A12.001 12.001 0 004.225 10H4a1 1 0 100 2h.225A12.001 12.001 0 0010 17.775V18a1 1 0 102 0v-.225A12.001 12.001 0 0017.775 12H18a1 1 0 100-2h-.225A12.001 12.001 0 0012 4.225V4a1 1 0 00-1-1zm0 2h.01M13 13h.01M13 15h.01" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-2">Web Design</h3>
+                        <p class="text-gray-600">Creating visually stunning and user-friendly websites that convert
+                            visitors into customers.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div
+                        class="p-8 bg-white rounded-xl shadow-lg border-t-4 border-indigo-600 transform hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-indigo-600"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-2">Print & Digital</h3>
+                        <p class="text-gray-600">From brochures to social media posts, I design engaging materials for
+                            both online and offline use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="1642950081236.jpg" alt="A photo of the designer"
+                        class="w-full h-auto rounded-full shadow-lg">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Hello! I'm a passionate graphics designer with over 10 years of experience crafting visually
+                        compelling stories for clients of all sizes. I specialize in clean, modern design that focuses
+                        on both aesthetics and function. My goal is to help you communicate your message effectively and
+                        leave a lasting impression.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        I believe great design is a collaborative process, and I love working with clients to turn their
+                        ideas into reality. When I'm not designing, you can find me exploring new art forms, reading, or
+                        enjoying a good cup of coffee.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+                    Ready to start a project or just want to say hello? Fill out the form below and I'll get back to you
+                    as soon as possible.
+                </p>
+                <div class="max-w-xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+                    <form>
+                        <div class="mb-6">
+                            <input type="text" placeholder="Your Name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors duration-200"
+                                required>
+                        </div>
+                        <div class="mb-6">
+                            <input type="email" placeholder="Your Email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors duration-200"
+                                required>
+                        </div>
+                        <div class="mb-6">
+                            <textarea placeholder="Your Message" rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors duration-200"
+                                required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full px-6 py-4 bg-indigo-600 text-white font-bold rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-200">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Start -->
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="footer-5-column">
+            <div class="footer-container">
+                <!-- Footer Navigation Start -->
+                <div class="footer-navbar-container">
+                    <div class="footer-company-details">
+                        <!-- <div class="footer-details-inner"> -->
+                        <div class="footer-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" color="#ffffff" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                            </svg>
+                        </div>
+                        <div class="footer-content">
+                            <p>
+                                Frontend-Snippets is 100% free production-ready code snippets for front-end development.
+                                It offers a
+                                wide variety of code snippets for HTML, CSS, SCSS, and JavaScript. Make your Front-End
+                                Development 2X
+                                Faster.<br>
+                                Mobile Number : - +91 8591805195
+                            </p>
+                        </div>
+                        <div class="footer-icons">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" color="#ffffff" viewBox="0 0 512 512">
+                                            <path
+                                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" color="#ffffff" viewBox="0 0 512 512">
+                                            <path
+                                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" color="#ffffff" viewBox="0 0 448 512">
+                                            <path
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" color="#ffffff" viewBox="0 0 448 512">
+                                            <path
+                                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="footer-navbar">
+                        <div class="footer-navbar-col">
+                            <h3><b>Solutions</b></h3>
+                            <ul>
+                                <li><a href="#"> Marketing </a></li>
+                                <li><a href="#"> Analyst </a></li>
+                                <li><a href="#"> Insight </a></li>
+                                <li><a href="#"> Commerce </a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-navbar-col">
+                            <h3><b>Support</b></h3>
+                            <ul>
+                                <li><a href="#"> Insight </a></li>
+                                <li><a href="#"> Analyst </a></li>
+                                <li><a href="#"> Marketing </a></li>
+                                <li><a href="#"> Commerce </a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-navbar-col">
+                            <h3><b>Company</b></h3>
+                            <ul>
+                                <li><a href="#"> Analyst </a></li>
+                                <li><a href="#"> Commerce </a></li>
+                                <li><a href="#"> Marketing </a></li>
+                                <li><a href="#"> Insight </a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-navbar-col">
+                            <h3><b>Legal</b></h3>
+                            <ul>
+                                <li><a href="#"> Commerce </a></li>
+                                <li><a href="#"> Analyst </a></li>
+                                <li><a href="#"> Insight </a></li>
+                                <li><a href="#"> Marketing </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Creative Designs. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+    <!-- JavaScript for Mobile Menu & Smooth Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle mobile menu visibility
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
